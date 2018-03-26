@@ -1,0 +1,30 @@
+import Uri from 'vscode-uri';
+import { MessageReader, MessageWriter } from "vscode-jsonrpc";
+import { IConnection, TextDocuments } from 'vscode-languageserver';
+import { TextDocument, Diagnostic, Command, CompletionList, CompletionItem, Hover, SymbolInformation, DocumentSymbolParams, TextEdit } from "vscode-languageserver-types";
+import { TextDocumentPositionParams, DocumentRangeFormattingParams, ExecuteCommandParams, CodeActionParams } from 'vscode-base-languageclient/lib/protocol';
+import { LanguageService, JSONDocument } from "vscode-json-languageservice";
+export declare function start(reader: MessageReader, writer: MessageWriter): JsonServer;
+export declare class JsonServer {
+    protected readonly connection: IConnection;
+    protected workspaceRoot: Uri | undefined;
+    protected readonly documents: TextDocuments;
+    protected readonly jsonService: LanguageService;
+    protected readonly pendingValidationRequests: Map<string, number>;
+    constructor(connection: IConnection);
+    start(): void;
+    protected codeAction(params: CodeActionParams): Command[];
+    protected format(params: DocumentRangeFormattingParams): TextEdit[];
+    protected findDocumentSymbols(params: DocumentSymbolParams): SymbolInformation[];
+    protected executeCommand(params: ExecuteCommandParams): any;
+    protected hover(params: TextDocumentPositionParams): Thenable<Hover>;
+    protected resovleSchema(url: string): Promise<string>;
+    protected resolveCompletion(item: CompletionItem): Thenable<CompletionItem>;
+    protected completion(params: TextDocumentPositionParams): Thenable<CompletionList>;
+    protected validate(document: TextDocument): void;
+    protected cleanPendingValidation(document: TextDocument): void;
+    protected doValidate(document: TextDocument): void;
+    protected cleanDiagnostics(document: TextDocument): void;
+    protected sendDiagnostics(document: TextDocument, diagnostics: Diagnostic[]): void;
+    protected getJSONDocument(document: TextDocument): JSONDocument;
+}

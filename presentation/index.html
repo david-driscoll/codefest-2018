@@ -1,0 +1,443 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <style>
+        .my-text-shadow {
+            text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black !important;
+        }
+
+        .my-citation super {
+            display: inline-block;
+            font-size: 0.32em;
+        }
+
+        .my-citation image {
+            margin: 0 !important;
+        }
+
+        .my-citation tr {
+            line-height: 0em;
+        }
+
+        .my-citation td {
+            border-bottom: none !important;
+            padding: 0 !important;
+            text-align: right !important;
+        }
+
+        img {
+            background: none !important;
+            border: 0 !important;
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-background-image="img/code-bg2.jpg">
+                <h2 class="my-text-shadow">If I can make</h2>
+                <h2 class="my-text-shadow">a Language Server</h2>
+                <h4 class="my-text-shadow">...you can too!</h4>
+
+                <div style="position: absolute;left: 0;bottom: -320px;font-size: 70%;" class="my-text-shadow">
+                    <table>
+                        <tr>
+                            <td align="left" style="border-bottom: 0;">
+                                <img style="border-width: 0px;margin: -2px 4px;background: none;" src="img/open-sourcerer.png" height="100" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" style="border-bottom: 0;">
+                                David Driscoll
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" style="border-bottom: 0;">
+                                Open Sourcerer / Software Developer
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" style="border-bottom: 0;">
+                                <img style="border-width: 0px;margin: -2px 4px;background: black;border-radius: 12px;" src="img/mvp.png" height="100" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div style="position: absolute;right: 0;bottom: -320px;font-size: 70%;" class="my-text-shadow">
+                    <table>
+                        <tr>
+                            <td align="right" style="border-bottom: 0;">
+                                https://daviddot.net
+                                <img style="border-width: 0px;margin: -2px 4px;background: white;border-radius: 12px;" src="img/web.png" height="24" width="24"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" style="border-bottom: 0;">
+                                david_dotnet
+                                <img style="border-width: 0px;margin: -2px 4px;background: black;border-radius: 12px;" src="img/Twitter_Social_Icon_Circle_Color.png"
+                                    height="24" width="24" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" style="border-bottom: 0;">
+                                david-driscoll
+                                <img style="border-width: 0px;margin: -2px 4px;background: black;border-radius: 12px;" src="img/GitHub-Mark-Light-120px-plus.png"
+                                    height="24" width="24" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section>
+                <h2>What is the
+                    <br /> Language Server Protocol?</h2>
+
+                <div class="fragment">
+                    <img data-src="img/lspimage.png" />
+                </div>
+
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                    #### What is it?
+                    - Specification, API, Interface, JsonRPC
+                    - Allows you to choose your editor, and still have IDE features, intellisense, etc
+                    - It defines a pattern where a client (editor) and server (language) can interact with one another.
+                    </textarea>
+                </aside>
+            </section>
+            <section>
+                <h2>Why?</h2>
+                <div class="fragment" style="margin: 40px;">
+                    <img data-src="img/java.png" height="120" />
+                    <span class="fragment">
+                        <img data-src="img/arrow.png" height="60" style="margin: 50px 15px;" />
+                        <img data-src="img/eclipse.png" height="120" />
+                    </span>
+                </div>
+                <div class="fragment">
+                    <img data-src="img/dotnet.png" height="120" />
+                    <span class="fragment">
+                        <img data-src="img/arrow.png" height="60" style="margin: 50px 15px;" />
+                        <img data-src="img/visualstudio.png" height="120" />
+                    </span>
+                </div>
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                    #### Why?
+                    - If I want to write .NET I use Visual Studio?
+                    - If I want to write Java I use Eclipse?
+
+                    #### Ask the audience, thoughts?
+                    </textarea>
+                </aside>
+            </section>
+
+            <section>
+                <h2>What if...</h2>
+
+                <div class="fragment">
+                    <img data-src="img/eclipse.png" height="120" />
+                    <span class="fragment">
+                        <img data-src="img/arrow.png" height="60" style="margin: 50px 15px;" />
+                        <img data-src="img/dotnet.png" height="120" />
+                    </span>
+                </div>
+                <div class="fragment" style="margin: 40px;">
+                    <img data-src="img/visualstudio.png" height="120" />
+                    <span class="fragment">
+                        <img data-src="img/arrow.png" height="60" style="margin: 50px 15px;" />
+                        <img data-src="img/java.png" height="120" />
+                    </span>
+                </div>
+                <div class="fragment" style="margin: 40px;">
+                    <img data-src="img/emacs.png" height="120" />
+                    <span class="fragment">
+                        <img data-src="img/arrow.png" height="60" style="margin: 50px 15px;" />
+                        <div style="font-size: 120px;
+                        line-height: 100px;
+                        font-weight: 800;
+                        display: inline-block;
+                        height: 120px;
+                        margin-top: 30px;
+                        vertical-align: top;">?</div>
+                    </span>
+                </div>
+
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                        #### What if...
+                        - I like to use Visual Studio, and want to write Java?
+                        - I like Eclipse and want to write C#?
+                        - I like Emacs, and want to use it for C#, Java and Rust?
+                        - I like VSCode, but my co-workers want to use Visual Studio?
+
+                        ITS LIKE NOTEPAD!
+                        What if my architect has designed some crazy DSL?
+                        What if he gave me a language server to go along with it?  Or if not, what I created one!?
+                        </if>
+                        </textarea>
+                </aside>
+            </section>
+
+            <section>
+                <h5>Notepad is not fun :(</h5>
+                <img data-src="img/notepad.png" />
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                    You might as well be using notepad
+
+                    Think about what the modern IDE does.
+                    * Intellisense
+                    * Refactoring
+                    * Diagnostics / Errors / Warnings
+                    </textarea>
+                </aside>
+            </section>
+
+            <section data-background-image="img/code-bg2.jpg">
+                <h2>Example (OmniSharp)</h2>
+
+                <monaco-editor style="height: 330px; width: 960px;" language="csharp" lsp="omnisharp" filename="file.csx" url="monaco/server/root/file.csx"
+                />
+            </section>
+            <section data-background-image="img/code-bg2.jpg">
+                <h2>Example (TypeScript)</h2>
+
+                <monaco-editor style="height: 330px; width: 960px;">
+                    <div class="monaco-code">
+                        window.location;
+                    </div>
+                </monaco-editor>
+            </section>
+
+            <section>
+                <h3>What Editors can I use?</h3>
+
+                <img data-src="img/vscode.png" style="height: 200px;" class="fragment" data-fragment-index="1" />
+                <img data-src="img/eclipse.png" style="height: 200px;" class="fragment" data-fragment-index="3" />
+                <img data-src="img/emacs.png" style="height: 200px;" class="fragment" data-fragment-index="5" />
+                <img data-src="img/visualstudio.png" style="height: 200px;" class="fragment" data-fragment-index="7" />
+                <img data-src="img/eclipse-che.png" style="height: 200px;" class="fragment" data-fragment-index="2" />
+                <img data-src="img/atom.png" style="height: 200px;" class="fragment" data-fragment-index="6" />
+                <img data-src="img/vim.png" style="height: 200px;" class="fragment" data-fragment-index="4" />
+
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                        Varied Set of editors
+
+                        * VSCode
+                        * Monaco
+                        * Atom
+                        * Vim
+                        * Emacs
+                        * Eclipse IDE
+                        * Eclipse Che
+                        * Visual Studio
+                        </textarea>
+                </aside>
+            </section>
+            <section>
+                <h3>Language Support</h3>
+
+                <ul style="display: inline-block; width: 40%;">
+                    <span class="fragment">
+                        <li>C#</li>
+                        <li>C++</li>
+                        <li>HTML</li>
+                        <li>CSS/LESS/SCSS</li>
+                        <li>Json</li>
+                    </span>
+                    <span class="fragment">
+                        <li>PHP</li>
+                        <li>Java</li>
+                        <li>SQL</li>
+                        <li>Go</li>
+                    </span>
+                </ul>
+                <ul style="display: inline-block; width: 40%;">
+                    <span class="fragment">
+                        <li>Rust</li>
+                        <li>Scala</li>
+                        <li>TypeScript</li>
+                        <li>JavaScript</li>
+                        <li>Docker</li>
+                    </span>
+                    <span class="fragment">
+                        <li>Lua</li>
+                        <li>Ruby</li>
+                        <li>Elixir</li>
+                        <li>Groovy</li>
+                    </span>
+                </ul>
+
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                    Virtually any language, DSL, or anything you can think of
+                    </textarea>
+                </aside>
+            </section>
+            <section>
+                <h2>Writing a Language Server</h2>
+                <ul>
+                    <li>
+                        <a href="https://microsoft.github.io/language-server-protocol/specification">https://microsoft.github.io/language-server-protocol/specification</a>
+                    </li>
+                    <li class="fragment">Protocol defines operations</li>
+                    <li class="fragment">Server and Client negotiate capabilities</li>
+                    <li class="fragment">Json RPC</li>
+                    <li class="fragment">Bi-directional communication</li>
+                    <li class="fragment">Transports
+                        <ul>
+                            <li>Stdio</li>
+                            <li>WebSocket</li>
+                            <li>Socket</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                        Spec for the client defines the context of what is happening in the editor
+                        Spec for the server defines the responses and parts that are supported by the client
+                    </textarea>
+                </aside>
+            </section>
+            <section>
+                <h2>SDKs</h2>
+                <ul>
+                    <li class="fragment">NodeJS
+                        <ul>
+                            <li>TypeScript</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">Java</li>
+                    <li class="fragment">C#</li>
+                </ul>
+
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                    Virtually any language, DSL, or anything you can think of
+                    </textarea>
+                </aside>
+            </section>
+            <section>
+                <h2>Supports features like...</h2>
+                <ul class="fragment">
+                    <li>Goto Definition</li>
+                    <li>Rename Symbol</li>
+                    <li>Workspace Symbols</li>
+                    <li>Logging</li>
+                    <li>Diagnostics / Errors</li>
+                    <li>Intellisense</li>
+                </ul>
+                <ul class="fragment">
+                    <li>Signature Help</li>
+                    <li>Hover</li>
+                    <li>Document Symbols</li>
+                    <li>Formatting</li>
+                    <li>Code Lens</li>
+                    <li>Code Actions</li>
+                </ul>
+
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                    Others including configuration , file syncronization, messages, etc
+                    </textarea>
+                </aside>
+            </section>
+            <section>
+                <h2>Creating a language server?</h2>
+                <ul>
+                    <li class="fragment">Custom Templating Language!</li>
+                    <li class="fragment">Configuration files!</li>
+                    <li class="fragment">Support a custom Scripting Language!</li>
+                    <li class="fragment">Translation!</li>
+                </ul>
+
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                    Many possible options, and making a server is really easy!
+                    </textarea>
+                </aside>
+            </section>
+            <section data-background-image="img/demo.png"><h1>Demo</h1></section>
+            <!-- <section data-background-image="img/code-bg2.jpg">
+                <h1>Demos</h1></section>
+            <section>Slide 2</section>
+            <section>Slide 2</section> -->
+            <!-- <section>
+                <monaco-editor style="height: 330px; width: 960px;"></monaco-editor>
+            </section> -->
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <!-- <script src="monaco/lib/bundle.js"></script> -->
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            // width: "100%",
+            // height: "100%",
+            // margin: 0,
+            // minScale: 1,
+            // maxScale: 1,
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/search/search.js', async: true },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true },
+                { src: 'plugin/monaco/index.js', async: true }
+            ],
+
+            // // Parallax background image
+            // parallaxBackgroundImage: 'css/parallax.jpg', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+
+            // // Parallax background size
+            // parallaxBackgroundSize: '4000px 2600px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+
+            // // Number of pixels to move the parallax background per slide
+            // // - Calculated automatically unless specified
+            // // - Set to 0 to disable movement along an axis
+            // parallaxBackgroundHorizontal: 200,
+            // parallaxBackgroundVertical: 50
+        });
+    </script>
+
+</body>
+
+
+
+</html>

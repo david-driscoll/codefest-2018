@@ -4,17 +4,17 @@ using System.ComponentModel.Composition;
 
 namespace MockLanguageExtension
 {
-    public class JavaContentDefinition
+    public class IniContentDefinition
     {
         [Export]
-        [Name("java")]
+        [Name("ini")]
         [BaseDefinition(CodeRemoteContentDefinition.CodeRemoteContentTypeName)]
         internal static ContentTypeDefinition FooContentTypeDefinition;
 
 
         [Export]
-        [FileExtension(".java")]
-        [ContentType("java")]
+        [FileExtension(".ini")]
+        [ContentType("ini")]
         internal static FileExtensionToContentTypeDefinition FooFileExtensionDefinition;
     }
 }

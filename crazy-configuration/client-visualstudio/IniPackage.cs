@@ -9,10 +9,10 @@ namespace MockLanguageExtension
     /// </summary>
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About
-    [ProvideAutoLoad(JavaLanguageClient.UiContextGuidString)]
+    [ProvideAutoLoad(IniLanguageClient.UiContextGuidString)]
     [Guid(PackageGuidString)]
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
-    public sealed class JavaPackage : Package
+    public sealed class IniPackage : Package
     {
         /// <summary>
         /// CustomCommandPackage GUID string.
@@ -22,7 +22,7 @@ namespace MockLanguageExtension
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCommand"/> class.
         /// </summary>
-        public JavaPackage()
+        public IniPackage()
         {
         }
 

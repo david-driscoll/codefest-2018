@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="JavaLanguageExtension" Version="1.0" Language="en-US" Publisher="David Driscoll" />
-        <DisplayName>Java Language Extension</DisplayName>
-        <Description xml:space="preserve">Java LSP Server!Java LSP Server!</Description>
+        <Identity Id="IniLanguageExtension" Version="1.0" Language="en-US" Publisher="David Driscoll" />
+        <DisplayName>Ini Language Extension</DisplayName>
+        <Description xml:space="preserve">Ini LSP Server!</Description>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0]" />
@@ -15,7 +15,7 @@
     </Dependencies>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
-        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="JavaLanguageExtension.pkgdef" />
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="IniLanguageExtension.pkgdef" />
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
     </Assets>
     <Prerequisites>

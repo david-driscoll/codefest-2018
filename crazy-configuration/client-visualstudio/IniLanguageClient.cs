@@ -22,7 +22,7 @@ namespace MockLanguageExtension
     [Export(typeof(ILanguageClient))]
     public class IniLanguageClient : ILanguageClient, ILanguageClientCustomMessage
     {
-        internal const string UiContextGuidString = "DE885E15-D44E-40B1-A370-45372EFC23AA";
+        internal const string UiContextGuidString = "02485db8-f875-4e4b-b81a-4255fceca408";
 
         private Guid uiContextGuid = new Guid(UiContextGuidString);
 
@@ -97,7 +97,7 @@ namespace MockLanguageExtension
 
             args.AddRange(new[]
             {
-                "run", "-p", Path.Combine(serverHome, "server-csharp.dll")
+                "\"" + Path.Combine(serverHome, "server-csharp.dll") + "\""
             });
 
             ProcessStartInfo info = new ProcessStartInfo

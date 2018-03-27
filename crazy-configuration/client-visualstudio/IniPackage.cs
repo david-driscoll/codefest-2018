@@ -17,7 +17,7 @@ namespace MockLanguageExtension
         /// <summary>
         /// CustomCommandPackage GUID string.
         /// </summary>
-        public const string PackageGuidString = "330ce502-4e1f-44b8-ab32-82a7ea71beeb";
+        public const string PackageGuidString = "70fbc352-b96a-41f7-9eb9-bc69090329ca";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCommand"/> class.

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>reveal.js</title>
+    <title>Language Server Protocol</title>
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/black.css">
@@ -114,11 +114,55 @@
                 </div>
             </section>
             <section>
+                <h2 class="fragment">Compiler???</h2>
+                <ul>
+                    <li class="fragment">Read Source Code</li>
+                    <li class="fragment">Produce Machine Code (DLL, EXE)</li>
+                </ul>
+
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                        #### At a high level what does a compiler do?
+                        * Reads Source Code (parses)
+                        * Writes out machine code (IL, DLL, EXE, etc)
+                        </textarea>
+                </aside>
+            </section>
+            <section>
+                <img src="img/blackbox.png" />
+
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                        #### A big black box
+                        * We have to reason about the code base on the rules we know
+                        * The compiler doesn't tell us much
+                        </textarea>
+                </aside>
+            </section>
+            <section>
+                <img src="img/magic.gif" height=400 />
+
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                        #### In other words...
+                        </textarea>
+                </aside>
+            </section>
+            <section>
+                <img src="img/magicman.gif" height=400 />
+
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                        Sometimes the magic frustrates us...
+                        Ever missed a semicolon, bracket or something else??
+                    </textarea>
+                </aside>
+            </section>
+            <section>
                 <h2>What is the
                     <br /> Language Server Protocol?</h2>
-
                 <div class="fragment">
-                    <img data-src="img/lspimage.png" />
+                    <img height=450 width=600 data-src="img/lsp.png" />
                 </div>
 
                 <aside class="notes" data-markdown>
@@ -129,6 +173,11 @@
                     - It defines a pattern where a client (editor) and server (language) can interact with one another.
                     </textarea>
                 </aside>
+            </section>
+            <section>
+                <div class="fragment">
+                    <img data-src="img/lspimage.png" />
+                </div>
             </section>
             <section>
                 <h2>Why?</h2>
@@ -386,7 +435,71 @@
                     </textarea>
                 </aside>
             </section>
-            <section data-background-image="img/demo.png"><h1>Demo</h1></section>
+            <section data-background-image="img/demo.png">
+                <h1>Demo</h1>
+            </section>
+
+            <section data-background-image="img/code-bg2.jpg">
+                <h2 class="my-text-shadow">Thanks for coming!</h2>
+                <p>
+                    Slides and examples
+                    <br />
+                    <a href="https://github.com/david-driscoll/codefest-2018">
+                        <strong style="color: white;">https://github.com/david-driscoll/codefest-2018</strong>
+                    </a>
+                </p>
+
+                <div style="position: absolute;left: 0;bottom: -320px;font-size: 70%;" class="my-text-shadow">
+                    <table>
+                        <tr>
+                            <td align="left" style="border-bottom: 0;">
+                                <img style="border-width: 0px;margin: -2px 4px;background: none;" src="img/open-sourcerer.png" height="100" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" style="border-bottom: 0;">
+                                David Driscoll
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" style="border-bottom: 0;">
+                                Open Sourcerer / Software Developer
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" style="border-bottom: 0;">
+                                <img style="border-width: 0px;margin: -2px 4px;background: black;border-radius: 12px;" src="img/mvp.png" height="100" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div style="position: absolute;right: 0;bottom: -320px;font-size: 70%;" class="my-text-shadow">
+                    <table>
+                        <tr>
+                            <td align="right" style="border-bottom: 0;">
+                                https://daviddot.net
+                                <img style="border-width: 0px;margin: -2px 4px;background: white;border-radius: 12px;" src="img/web.png" height="24" width="24"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" style="border-bottom: 0;">
+                                david_dotnet
+                                <img style="border-width: 0px;margin: -2px 4px;background: black;border-radius: 12px;" src="img/Twitter_Social_Icon_Circle_Color.png"
+                                    height="24" width="24" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" style="border-bottom: 0;">
+                                david-driscoll
+                                <img style="border-width: 0px;margin: -2px 4px;background: black;border-radius: 12px;" src="img/GitHub-Mark-Light-120px-plus.png"
+                                    height="24" width="24" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
             <!-- <section data-background-image="img/code-bg2.jpg">
                 <h1>Demos</h1></section>
             <section>Slide 2</section>

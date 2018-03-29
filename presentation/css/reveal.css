@@ -151,6 +151,12 @@ body {
   .reveal .slides section .fragment.current-visible.current-fragment {
     opacity: 1;
     visibility: inherit; }
+.reveal .slides section .fragment.current-display {
+  opacity: 0;
+  visibility: none; }
+  .reveal .slides section .fragment.current-display.current-fragment {
+    opacity: 1;
+    visibility: inherit; }
 
 .reveal .slides section .fragment.highlight-red,
 .reveal .slides section .fragment.highlight-current-red,
@@ -270,8 +276,12 @@ body {
     color: currentColor;
     -webkit-transform: scale(0.9999);
             transform: scale(0.9999);
-    transition: color 0.2s ease, opacity 0.2s ease, -webkit-transform 0.2s ease;
-    transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+    transition: color 0.2s ease,
+ opacity 0.2s ease,
+ -webkit-transform 0.2s ease;
+    transition: color 0.2s ease,
+ opacity 0.2s ease,
+ transform 0.2s ease;
     z-index: 2;
     pointer-events: auto;
     font-size: inherit;

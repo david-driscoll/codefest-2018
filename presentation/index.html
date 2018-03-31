@@ -112,6 +112,35 @@
                         </tr>
                     </table>
                 </div>
+
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                    #### Who is this guy?
+                    * Team Lead on OmniSharp (C# for vscode and more)
+                    * Software Developer by day
+                    * Father by night (3 girls, pray for me)
+                    </textarea>
+                </aside>
+            </section>
+            <section>
+                <h2>What do you think a Language Server is?</h2>
+
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                    #### Can anyone tell me what they think LSP is?
+                    * Gather Ideas
+                    * Intelligent Compiler???
+                    * Roslyn
+                    </textarea>
+                </aside>
+            </section>
+            <section>
+                <h2>but first...</h2>
+                <aside class="notes" data-markdown>
+                    <textarea data-template>
+                    #### We have to talk about the compiler.
+                    </textarea>
+                </aside>
             </section>
             <section>
                 <h2 class="fragment">Compiler???</h2>
@@ -122,10 +151,10 @@
 
                 <aside class="notes" data-markdown>
                     <textarea data-template>
-                        #### At a high level what does a compiler do?
-                        * Reads Source Code (parses)
-                        * Writes out machine code (IL, DLL, EXE, etc)
-                        </textarea>
+                    #### At a high level what does a compiler do?
+                    * Reads Source Code (parses)
+                    * Writes out machine code (IL, DLL, EXE, etc)
+                    </textarea>
                 </aside>
             </section>
             <section>
@@ -133,10 +162,10 @@
 
                 <aside class="notes" data-markdown>
                     <textarea data-template>
-                        #### A big black box
-                        * We have to reason about the code base on the rules we know
-                        * The compiler doesn't tell us much
-                        </textarea>
+                    #### A big black box
+                    * We have to reason about the code base on the rules we know
+                    * The compiler doesn't tell us much
+                    </textarea>
                 </aside>
             </section>
             <section>
@@ -144,8 +173,8 @@
 
                 <aside class="notes" data-markdown>
                     <textarea data-template>
-                        #### In other words...
-                        </textarea>
+                    #### In other words...
+                    </textarea>
                 </aside>
             </section>
             <section>
@@ -278,13 +307,17 @@
                 <h2>Example (TypeScript)</h2>
 
                 <monaco-editor style="height: 330px; width: 960px;">
-                    <div class="monaco-code">
-interface CodeFest {
+                    <textarea class="monaco-code">
+interface CodeFest
+{
     year: number;
     location: string;
 }
-let codefest: CodeFest = { year: 2018; }
-                    </div>
+
+let codefest: CodeFest = {
+    year: 2018;
+}
+                    </textarea>
                 </monaco-editor>
             </section>
 

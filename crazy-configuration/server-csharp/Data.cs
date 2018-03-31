@@ -4,8 +4,6 @@ using System.Collections.Generic;
 
 namespace server_csharp
 {
-
-
     static class Data
     {
         private static readonly List<(string section, string name)> _names = new List<(string section, string name)> {
